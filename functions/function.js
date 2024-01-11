@@ -61,8 +61,32 @@ let numbers = [20, 20, 20, 25];
 
 meanVal.apply(null, numbers);
 function meanVal(a, b, c, d) {
-let sum = parseInt(`${a}`) + parseInt(`${b}`) + parseInt(`${c}`) + parseInt(`${d}`);
-let result= sum/ 4;
-console.log("Mean value is equal to: " + result)
+  let sum =
+    parseInt(`${a}`) + parseInt(`${b}`) + parseInt(`${c}`) + parseInt(`${d}`);
+  let result = sum / 4;
+  console.log("Mean value is equal to: " + result);
 }
+// systembolaget
+function ageOkCheck(age) {
+  if (age >= 0 && age <= 14) {
+    console.log("Get out of here!");
+  } else if (age >= 15 && age <= 17) {
+    console.log("Sorry, you are not old enough.");
+  } else if (age >= 18 && age <= 80) {
+    console.log("Thank you! Welcome!");
+  } else {
+    console.log("I'm sorry where is your caretaker?");
+  }
+}
+ageOkCheck(80);
+// Sum
+function calcS(myArray) {
+  if (myArray.length <= 10) {
+    let sum = myArray.reduce((p, c) => {
+      return p + c;
+    }, 0);
+    console.log(sum);
+  }
+}
+calcS([1, 20, 3, 4, 5, 60, 20, 523, 35, 325]);
 
