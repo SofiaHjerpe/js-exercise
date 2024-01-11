@@ -90,3 +90,18 @@ function calcS(myArray) {
 }
 calcS([1, 20, 3, 4, 5, 60, 20, 523, 35, 325]);
 
+// List a persons skills
+
+function showPerson(person) {
+  let personData =
+    `${person.name} ${person.age} ${person.city}` +
+    " skills: " +
+    `${person.skills} `;
+  console.log(personData);
+}
+showPerson({
+  name: "Sofia Hjerpe",
+  age: 24,
+  city: "Stockholm",
+  skills: ["Salsa", "UX", "Frontend", "Lindihop", "theater"],
+});
