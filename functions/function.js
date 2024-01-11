@@ -31,4 +31,36 @@ function box(length, width) {
   console.log("The area of the box is: " + area);
 }
 box(20, 30);
+// greating with name
+function fullName(firstName, lastName) {
+  let message = `Hello ${firstName} ${lastName}! How are you doing?`;
+  window.alert(message);
+}
 
+fullName("Sofia", "Hjerpe");
+// distance converter
+function converter(kilometres) {
+  let miles = (kilometres * 2) / 3;
+  console.log(
+    "answear: " +
+      kilometres +
+      " kilometres is equal to " +
+      miles +
+      " american miles."
+  );
+}
+converter(20);
+// temperature converter
+function convertTemp(celcius) {
+  let farenheit = celcius * 1.8 + 32;
+  console.log(celcius + "°C is equal to " + farenheit + " °F");
+}
+convertTemp(14);
+//mean value
+let numbers = [1, 5, 4, 6];
+
+meanVal.apply(null, numbers);
+function meanVal(a, b, c, d) {
+}
+
+meanVal();
