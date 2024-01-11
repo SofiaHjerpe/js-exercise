@@ -57,10 +57,12 @@ function convertTemp(celcius) {
 }
 convertTemp(14);
 //mean value
-let numbers = [1, 5, 4, 6];
+let numbers = [20, 20, 20, 25];
 
 meanVal.apply(null, numbers);
 function meanVal(a, b, c, d) {
+let sum = parseInt(`${a}`) + parseInt(`${b}`) + parseInt(`${c}`) + parseInt(`${d}`);
+let result= sum/ 4;
+console.log("Mean value is equal to: " + result)
 }
 
-meanVal();
