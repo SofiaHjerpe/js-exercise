@@ -42,7 +42,6 @@ class School {
 }
 ```
 
-2. Skapa en klass för ämnen. Instansvariabler ska vara name, students som en tom array och teacher som ett tomt objekt. _Väldigt likt klassen av en skola men det ska representera att vissa elever läser vissa ämene och att vissa lärare undervisar vissa ämnen._
 
 ```js
 class Subject {
@@ -50,16 +49,6 @@ class Subject {
   }
 }
 ```
-
-3.  Skapa en klass för studenter, instansvariablerna ska vara name, age, gender och subjects som en tom array.
-
-4.  Skapa en klass lärare med instansvariablerna name och subjects som en tom array.
-
-5.  Skapa en instans av skola, tre instanser av ämne, fem instanser av student samt två instanster av lärare. Var lite kreaktiva med namngivningen nu på de olika instansvariablerna.
-
-6.  Skriv en kodrad där du lägger till ett ämne i en lärares ämnesarray. _push()_ eller _unshift()_ Kommer du ihåg skillnaden på dem två? Skriv sen ut både läraren och ämnet du valde i konsolen och inspektera dem. Resonera, hur kan man använda den datan ur ett admins perspektiv på en skola, och tycker du den är komplett? Vad saknas?
-
-7.  Lägg till en student i ett ämnes studentarray. Skriv ut och inspektera i konsolen.
 
 8.  För att lösa problematiken i de två senaste uppgifterna så bör man i sådana här fall lägga till kopplingen i båda objekten. Alltså vi börjar med att lägga till ett ämne i en lärarens ämnesarray, och sen byter vi ut det tomma lärarobjekten i ämnet mot läraren. Då har vi en referens på båda sidorna. **Egentligen är detta något som kallas för en cirkulär referens vilket vi helst vill undvika när vi programmerar, då kan orsaka krashar i vissa fall, men i syftet för uppgiften så är det ingen fara.** Skapa nu en funktion som heter _addSubjectToTeacher_ som tar emot ett ämne och en lärare, och parar ihop dessa. Returnera sen läraren så du kan se förändringen i lärarens ämnesarray.
 
