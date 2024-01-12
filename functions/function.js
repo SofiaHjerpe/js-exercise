@@ -68,17 +68,18 @@ function meanVal(a, b, c, d) {
 }
 // systembolaget
 function ageOkCheck(age) {
-  if (age >= 0 && age <= 14) {
+  if (age <= 14) {
     console.log("Get out of here!");
-  } else if (age >= 15 && age <= 17) {
+  } else if (age <= 17) {
     console.log("Sorry, you are not old enough.");
-  } else if (age >= 18 && age <= 80) {
+  } else if (age <= 80) {
     console.log("Thank you! Welcome!");
   } else {
     console.log("I'm sorry where is your caretaker?");
   }
 }
 ageOkCheck(80);
+ageOkCheck(15);
 // Sum
 function calcS(myArray) {
   if (myArray.length <= 10) {
