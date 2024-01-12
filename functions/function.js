@@ -79,7 +79,6 @@ function ageOkCheck(age) {
   }
 }
 ageOkCheck(80);
-ageOkCheck(15);
 // Sum
 function calcS(myArray) {
   if (myArray.length <= 10) {
