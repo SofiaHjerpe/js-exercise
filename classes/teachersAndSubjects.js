@@ -1,27 +1,32 @@
+import { students } from "./students.js";
 // subjects class
 class Subjects {
   constructor(name, students, teachers) {
     this.name = name;
     (this.students = students), (this.teachers = teachers);
   }
+  regulateStudents(studentName, num) {
+    let student = students[studentName];
+    if (num < 12 && student) {
+      this.students.pop(student);
+    } else {
+      this.students.push(student);
+    }
+  }
 }
-let math = new Subjects("math", ["Maja", "Isak", "Emmanuel", "Calle"], {
+let math = new Subjects("math", [], {
   name: "Clas Gönsson",
   assistant: "Clara Nilsson",
 });
-let art = new Subjects("art", ["Michael", "Isak", "Emilia", "Chloe"], {
+let art = new Subjects("art", [], {
   name: "Helena Vidsteth",
   assistant: "Arvid Gönsson",
 });
-let music = new Subjects("music", ["Olle", "Hedvig", "Marcus", "Melvin"], {
+let music = new Subjects("music", [], {
   name: "Östen Wall",
   assistant: "Britt Klasson",
 });
-let swedish = new Subjects(
-  "swedish",
-  ["Emmanuel", "Hedvig", "Olle", "Melvin"],
-  {}
-);
+let swedish = new Subjects("swedish", [], {});
 //lägger ihop alla instanser till ett objekt
 let subjects = {
   math: math,
@@ -29,9 +34,18 @@ let subjects = {
   music: music,
   swedish: swedish,
 };
+//Är siffran under 12  tas elev bort från klassen. Är siffran över 12 läggs eleven till i klassen.
 
-music.students.push("Calle");
+music.regulateStudents("maja", 10);
+music.regulateStudents("emmanuel", 15);
+
 console.log(music);
+art.regulateStudents("maja", 10);
+art.regulateStudents("emmanuel", 10);
+art.regulateStudents("maja", 15);
+art.regulateStudents("emilia", 15);
+art.regulateStudents("emmanuel", 15);
+console.log(art);
 // teacher class
 class Teacher {
   constructor(name, subjects) {
