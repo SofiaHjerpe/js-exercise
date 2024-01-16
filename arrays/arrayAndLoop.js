@@ -4,10 +4,9 @@ fruits.push("apples", "pineapple", "kiwi", "bananas", "pears", "plums");
 console.log(fruits);
 // 2
 const randomNumbers = [1, 5, 35, 20, 22];
-for (var i = 0; i < randomNumbers.length; i++) {
-  randomNumbers[i] = randomNumbers[i] * 3;
-}
-console.log(randomNumbers);
+ const mapNumbers = randomNumbers.map((num) => num * 3)
+
+console.log(mapNumbers);
 // 3
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 let higherNumbers = [];
