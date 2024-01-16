@@ -64,16 +64,32 @@ class Teacher {
     // Tillbaka till ämnes klassen. Lägg till läraren i ämnets teachers-objekt. Sedan refereras till lärarens namn i denna class med this.name.
     subject.teachers.name = this.name;
   }
+  removeTeacher(subjectN, teacherName) {
+    if (subjectN == "art" && this.name == teacherName) {
+      let subject = subjects[subjectN];
+      this.name = "";
+      subject.teachers.name = "";
+    }
+    if (subjectN == "music" && this.name == teacherName) {
+      let subject = subjects[subjectN];
+      this.name = "";
+      subject.teachers.name = "";
+    }
+  }
 }
 let osten = new Teacher("Östen Wall", ["music"]);
 let clas = new Teacher("Clas Gönsson", ["math", "english"]);
+let osten2 = new Teacher("Osten Wall", []);
 
 osten.subjects.push("music theory");
 clas.subjects.unshift("swedish");
 
 osten.addSubjectToTeacher("music");
 clas.addSubjectToTeacher("art");
-console.log(osten);
+clas.removeTeacher("art", "Clas Gönsson");
+osten.removeTeacher("music", "Östen Wall");
+osten2.addSubjectToTeacher("music");
+console.log(osten2);
 console.log(clas);
 console.log(art);
 console.log(music);
