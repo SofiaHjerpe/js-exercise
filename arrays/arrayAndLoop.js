@@ -22,11 +22,9 @@ console.log(higherNumbers);
 console.log([1, 5, 3, 4].reduce((a, b) => a + b, 0));
 //  5
 const cars = ["volvo", "toyota", "saab"];
-for (let car of cars) {
-  if (car == "toyota") {
-    console.log(cars[1]);
-  }
-}
+const findCar = cars.find((car) => car === "toyota");
+console.log(findCar);
+
 // 6
 const flowers = ["rose", "tulip", "dandelion"];
 flowers.splice(-1, 1);
