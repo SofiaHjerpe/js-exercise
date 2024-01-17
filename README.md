@@ -56,9 +56,6 @@ class Subject {
 }
 ```
 
-8.  För att lösa problematiken i de två senaste uppgifterna så bör man i sådana här fall lägga till kopplingen i båda objekten. Alltså vi börjar med att lägga till ett ämne i en lärarens ämnesarray, och sen byter vi ut det tomma lärarobjekten i ämnet mot läraren. Då har vi en referens på båda sidorna. **Egentligen är detta något som kallas för en cirkulär referens vilket vi helst vill undvika när vi programmerar, då kan orsaka krashar i vissa fall, men i syftet för uppgiften så är det ingen fara.** Skapa nu en funktion som heter _addSubjectToTeacher_ som tar emot ett ämne och en lärare, och parar ihop dessa. Returnera sen läraren så du kan se förändringen i lärarens ämnesarray.
-
-9.  Varför ha en fristående funktion som lägger till ämne till en lärare? Varför inte bara lägga till en funktion (alltså en metod eftersom funktionen då är kopplad till en specifik klass) i klassen `Teacher` som en metod? Tänkt på att `this` måste användas när man refererar till en något i den egna klassen.
 
 10. Skapa följande metoder (Någon eller ett par av metoderna kan förekomma flera gånger fast på olika klasser med olika logik) och lägg in de i rätt klass: _addTeacher_, _enlistToSubject_, _addStudent_, _addSubject_
 
