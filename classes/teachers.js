@@ -9,7 +9,7 @@ class Teacher {
   // subjectName måste vara ett ämne inom ämne-objektet
   addSubjectToTeacher(subjectName) {
     // Hitta rätt ämne baserat på namn från ämne-objektet
-    // lägg till det i en subject variabel
+    // Lägg till det i en subject variabel
     let subject = subjects[subjectName];
 
     // Lägg till ämnet i lärarens subjects-array
@@ -42,6 +42,11 @@ osten.addSubjectToTeacher("music");
 clas.addSubjectToTeacher("art");
 clas.removeTeacher("art", "Clas Gönsson");
 osten.removeTeacher("music", "Östen Wall");
+export let teachers = {
+  osten: osten,
+  clas: clas,
+  osten2: osten2,
+};
 osten2.addSubjectToTeacher("music");
 console.log(osten2);
 console.log(clas);

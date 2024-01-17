@@ -19,6 +19,14 @@ export default class Subjects {
     this.students.pop(student);
     student.subjects.pop(subjectName);
   }
+  _displayAllStudentsListedToSubject(subjectN) {
+    let subjectName = subjects[subjectN];
+    return subjectName.students;
+  }
+  displayAllTeachers(subjectN) {
+    let subjectName = subjects[subjectN];
+    return subjectName.teachers;
+  }
 }
 export let math = new Subjects("math", [], {
   name: "Clas Gönsson",
@@ -47,7 +55,12 @@ music.addStudent("music", "hedvig");
 art.addStudent("art", "maja");
 art.addStudent("art", "hedvig");
 art.removeStudent("art", "hedvig");
+let allArtStudents = art._displayAllStudentsListedToSubject("art");
+console.log(allArtStudents);
+let allMusicStudents = art._displayAllStudentsListedToSubject("music");
+console.log(allMusicStudents);
+let allMusicTeachers = music.displayAllTeachers("music");
+console.log(allMusicTeachers);
 
 console.log(music);
-
 console.log(art);
