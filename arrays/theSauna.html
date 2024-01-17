@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The sauna</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>Welcome to the sauna!</h1>
+    <h3>List of celcius to farenhait</h3>
+    <p>please write just a number, see the list for help</p>
+
+    <label for="userInput">Please Write a temp in farenheit.</label>
+    <input type="number" name="userInput" id="userInput" value="42" />
+    <input type="button" value="Submit" onclick="inputResponse()" />
+    <div class="list-container">
+      <div>
+        <strong>°C</strong>
+        <ul>
+          <li>20°C</li>
+          <li>25°C</li>
+          <li>30°C</li>
+          <li>40°C</li>
+          <li>45°C</li>
+          <li>50°C</li>
+          <li>55°C</li>
+          <li>56°C</li>
+          <li>57°C</li>
+          <li>58°C</li>
+          <li>59°C</li>
+          <li>60°C</li>
+          <li>61°C</li>
+          <li>62°C</li>
+          <li>63°C</li>
+          <li>64°C</li>
+          <li>65°C</li>
+          <li>66°C</li>
+          <li>67°C</li>
+          <li>68°C</li>
+          <li>69°C</li>
+          <li>70°C</li>
+          <li>71°C</li>
+          <li>72°C</li>
+          <li>73°C</li>
+          <li>74°C</li>
+          <li>75°C</li>
+          <li>76°C</li>
+          <li>77°C</li>
+          <li>78°C</li>
+          <li>79°C</li>
+          <li>80°C</li>
+          <li>81°C</li>
+          <li>82°C</li>
+          <li>83°C</li>
+          <li>84°C</li>
+          <li>85°C</li>
+          <li>90°C</li>
+          <li>100°C</li>
+          <li>105°C</li>
+        </ul>
+      </div>
+
+      <div>
+        <strong>°F</strong>
+        <ul>
+          <li>68°F</li>
+          <li>77°F</li>
+          <li>86°F</li>
+          <li>104°F</li>
+          <li>113°F</li>
+          <li>122°F</li>
+          <li>131°F</li>
+          <li>132.8°F</li>
+          <li>134.6°F</li>
+          <li>136.4°F</li>
+          <li>138.2°F</li>
+          <li>140°F</li>
+          <li>141.8°F</li>
+          <li>143.6°F</li>
+          <li>145.4°F</li>
+          <li>147.2°F</li>
+          <li>149°F</li>
+          <li>150.8°F</li>
+          <li>152.6°F</li>
+          <li>154.4°F</li>
+          <li>156.2°F</li>
+          <li>158°F</li>
+          <li>161.6.8°F</li>
+          <li>159.8°F</li>
+          <li>163.4°F</li>
+          <li>165.2°F</li>
+          <li>167°F</li>
+          <li>168.8°F</li>
+          <li>170.6°F</li>
+          <li>172.4°F</li>
+          <li>174.2°F</li>
+          <li>176°F</li>
+          <li>177.8°F</li>
+          <li>179.6°F</li>
+          <li>181.4°F</li>
+          <li>183.2°F</li>
+          <li>185°F</li>
+          <li>194°F</li>
+          <li>212°F</li>
+          <li>221°F</li>
+        </ul>
+      </div>
+    </div>
     <script src="sauna.js"></script>
-</body>
+  </body>
 </html>
+<style>
+  .list-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .strong {
+    text-align: center;
+  }
+  ul {
+    text-decoration: none;
+  }
+  ul:nth-of-type(1) {
+    color: #464;
+  }
+</style>
