@@ -6,9 +6,8 @@
 - arrays
 - arrays and loops
 - the Sauna
-[Go to Sauna project]()
 ```
-
+[Go to Sauna project] (https://sofiahjerpe.github.io/js-exercise/arrays/theSauna.html)
 ## functions
 
 ## calculator
