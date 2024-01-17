@@ -2,6 +2,10 @@
 
 [link to project] ("https://sofiahjerpe.github.io/js-exercise/")
 
+### Variables
+
+### Data types
+
 ## arrays
 
 ```js
