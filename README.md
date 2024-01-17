@@ -2,9 +2,9 @@
 
 [link to project] ("https://sofiahjerpe.github.io/js-exercise/")
 
-### Variables
 
-### Data types
+
+## Data types
 
 ## arrays
 
@@ -26,7 +26,7 @@
 ```
 
 ## simple-registration
-
+## objects
 ## classes
 
 #### Skolan - Öva på att använda klasser i JS
