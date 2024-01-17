@@ -6,14 +6,18 @@ export default class Subjects {
     (this.students = students), (this.teachers = teachers);
   }
 
-  addStudent(studentName) {
+  addStudent(subjectN, studentName) {
+    let subjectName = subjects[subjectN];
     let addStudent = students[studentName];
     this.students.push(addStudent);
+    addStudent.subjects.push(subjectName);
   }
 
-  removeStudent(studentName) {
+  removeStudent(subjectN, studentName) {
+    let subjectName = subjects[subjectN];
     let student = students[studentName];
     this.students.pop(student);
+    student.subjects.pop(subjectName);
   }
 }
 export let math = new Subjects("math", [], {
@@ -36,13 +40,13 @@ export let subjects = {
   music: music,
   swedish: swedish,
 };
-music.addStudent("emmanuel");
-music.addStudent("maja");
-music.removeStudent("maja");
-music.addStudent("hedvig");
-art.addStudent("maja");
-art.addStudent("hedvig");
-art.removeStudent("hedvig");
+music.addStudent("music", "emmanuel");
+music.addStudent("music", "maja");
+music.removeStudent("music", "maja");
+music.addStudent("music", "hedvig");
+art.addStudent("art", "maja");
+art.addStudent("art", "hedvig");
+art.removeStudent("art", "hedvig");
 
 console.log(music);
 

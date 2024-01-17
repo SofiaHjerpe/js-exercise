@@ -16,6 +16,9 @@ class School {
     let addStudent = students[studentName];
     this.student.push(addStudent);
   }
+  displayAllStudents() {
+    return this.student;
+  }
 }
 
 let mainSchool = new School(
@@ -28,4 +31,9 @@ let mainSchool = new School(
 
 mainSchool.addStudent("maja");
 mainSchool.addStudent("melvin");
+mainSchool.addStudent("hedvig");
+mainSchool.addStudent("emmanuel");
+mainSchool.addStudent("emilia");
+mainSchool.addStudent("melvin");
 console.log(mainSchool);
+console.log(mainSchool.displayAllStudents());
