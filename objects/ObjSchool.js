@@ -8,11 +8,7 @@ const lexicon = {
   students: [],
   teachers: [],
   listOfSubjects: "",
-  listOfStudents: function () {
-  for ( let student in this.students) {
-    console.log(this.students[student])
-  }
-},
+  listOfStudents: "",
   fireTeacher: "",
   addStudents: "",
 };
@@ -112,7 +108,7 @@ let thomas = {
   },
   addStudent: "",
 };
-let niclasNr2 = {
+let niclas2 = {
   name: "Niklas Fähnrich",
   subjects: [],
   students: [],
@@ -127,7 +123,7 @@ let niclasNr2 = {
 let teachers = {
   niclas: niclas,
   thomas: thomas,
-  niclasNr2: niclasNr2,
+  niclas2: niclas2,
 };
 // 5
 thomas.subjects.push(art);
@@ -214,7 +210,7 @@ emilia.addSubject("music");
 emmanuel.addSubject("spanish");
 melvin.addSubject("art");
 melvin.addSubject("music");
-niclasNr2.addSubjectToTeacher("art");
+niclas2.addSubjectToTeacher("art");
 thomas.addSubjectToTeacher("music");
 lexicon.addStudent("melvin");
 lexicon.addStudent("maja");
@@ -223,4 +219,11 @@ console.log(melvin);
 console.log(emilia);
 // 14
 
-console.log(lexicon.listOfStudents());
+lexicon.listOfStudents = function () {
+  for (let student in students) {
+    console.log(`${student}`);
+  }
+};
+
+lexicon.listOfStudents();
+lexicon.listOfSubjects("emmanuel");

@@ -1,5 +1,5 @@
-import { math, art, music, subjects } from "./subjects.js";
-import { MVG, VG, grades } from "./grades.js";
+import { art, music, subjects } from "./subjects.js";
+import { grades } from "./grades.js";
 
 import { students } from "./students.js";
 
@@ -18,20 +18,13 @@ class Teacher {
     // Lägg till ämnet i lärarens subjects-array
     this.subjects.push(subject);
 
-    // Tillbaka till ämnes klassen. Lägg till läraren i ämnets teachers-objekt. Sedan refereras till lärarens namn i denna class med this.name.
+    // Lägg till läraren i ämnets teacher-objekt. Sedan refereras till lärarens namn i denna class med this.name.
     subject.teachers.name = this.name;
   }
-  removeTeacher(subjectN, teacherName) {
-    if (subjectN == "art" && this.name == teacherName) {
-      let subject = subjects[subjectN];
-      this.name = "";
-      subject.teachers.name = "";
-    }
-    if (subjectN == "music" && this.name == teacherName) {
-      let subject = subjects[subjectN];
-      this.name = "";
-      subject.teachers.name = "";
-    }
+  removeTeacher(subjectN) {
+    let subject = subjects[subjectN];
+    this.name = "";
+    subject.teachers.name = "";
   }
   addGrade(t, studentName, subjectName, grade) {
     let teacher = teachers[t];
@@ -53,11 +46,16 @@ export let teachers = {
 };
 osten.subjects.push("music theory");
 clas.subjects.unshift("swedish");
+  
+console.log(clas.subjects);
+console.log(osten.subjects);
 
 osten.addSubjectToTeacher("music");
 clas.addSubjectToTeacher("art");
-clas.removeTeacher("art", "Clas Gönsson");
-osten.removeTeacher("music", "Östen Wall");
+clas.removeTeacher("art");
+console.log("art");
+console.log(clas);
+console.log(osten);
 
 osten2.addSubjectToTeacher("music");
 console.log(osten2);
@@ -65,5 +63,7 @@ console.log(clas);
 console.log(art);
 console.log(music);
 osten2.addGrade("osten2", "maja", "music", "MVG");
+osten.addGrade("osten", "melvin", "art", "VG");
+
 //6 Resonera
 // En admin på en skola kan använda datan för att lägga till nya lärare, ta bort lärare, lägga in och ta bort ämnen. Det saknas en beskrivning från läraren om dennes verksamhet och vad han eller hon fokuserar på att lära ut.
