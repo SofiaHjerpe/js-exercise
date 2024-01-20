@@ -90,9 +90,9 @@ let niclas = {
   students: [],
   addSubjectToTeacher: function (subjectName) {
     let subject = subjects[subjectName];
-    this.subjects.push(subject.name);
+    this.subjects.push(subject);
 
-    subject.teachers.name = this.name;
+    subject.teachers = this;
   },
   addStudent: "",
 };
@@ -102,9 +102,9 @@ let thomas = {
   students: [],
   addSubjectToTeacher: function (subjectName) {
     let subject = subjects[subjectName];
-    this.subjects.push(subject.name);
+    this.subjects.push(subject);
 
-    subject.teachers.name = this.name;
+    subject.teachers = this;
   },
   addStudent: "",
 };
@@ -114,9 +114,9 @@ let niclas2 = {
   students: [],
   addSubjectToTeacher: function (subjectName) {
     let subject = subjects[subjectName];
-    this.subjects.push(subject.name);
+    this.subjects.push(subject);
 
-    subject.teachers.name = this.name;
+    subject.teachers.name = this;
   },
   addStudent: "",
 };
@@ -144,7 +144,7 @@ console.log(art);
 niclas.addSubject = function (subjectName) {
   let subject = subjects[subjectName];
   niclas.subjects.push(subject);
-  subject.teachers.name = niclas.name;
+  subject.teachers = niclas;
 };
 niclas.addSubject("music");
 console.log(niclas);
@@ -180,8 +180,6 @@ emmanuel.addSubject = function (subjectName) {
 };
 
 melvin.addSubject("spanish");
-console.log(melvin);
-console.log(spanish);
 lexicon.listOfSubjects = function (studentName) {
   let student = students[studentName];
   console.log(student.subjects);
@@ -190,7 +188,7 @@ lexicon.listOfSubjects = function (studentName) {
 lexicon.listOfSubjects("melvin");
 lexicon.teachers.push(niclas);
 console.log(lexicon);
-
+niclas.addSubject("spanish");
 lexicon.fireTeacher = function (teacher, subject) {
   let teach = teachers[teacher];
   while (lexicon.teachers.length > 0) {

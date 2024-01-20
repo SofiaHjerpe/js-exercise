@@ -46,8 +46,8 @@ export let teachers = {
 };
 osten.subjects.push("music theory");
 clas.subjects.unshift("swedish");
-  
-console.log(clas.subjects);
+
+console.log("subjects", clas.subjects);
 console.log(osten.subjects);
 
 osten.addSubjectToTeacher("music");

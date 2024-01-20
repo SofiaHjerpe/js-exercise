@@ -1,8 +1,10 @@
 window.alert("Hello! How are you doing?");
 // 1
-let chosenNumber = window.prompt("Please write a number");
+let number = window.prompt("Please write a number");
+let chosenNumber = parseInt(number);
 // 2
-let anotherNum = window.prompt("Write another number");
+let num = window.prompt("Write another number");
+let anotherNum = parseInt(num);
 // 3
 let countingMethod = window.prompt(
   "Chose counting method. You can choose between either +, -, * and /. "
@@ -10,7 +12,7 @@ let countingMethod = window.prompt(
 // 4
 // 5
 if (countingMethod == "+") {
-  window.alert("sum: " + parseInt(chosenNumber) + parseInt(anotherNum));
+  window.alert("sum: " + Number(chosenNumber + anotherNum));
 } else if (countingMethod == "-") {
   window.alert("differens: " + chosenNumber - anotherNum);
 } else if (countingMethod == "*") {
@@ -18,9 +20,7 @@ if (countingMethod == "+") {
 } else if (countingMethod == "/") {
   window.alert("kvot: " + chosenNumber / anotherNum);
 } else {
-  window.alert(
-    "Error!! You have to write an existing method. Please write either +, -, * or /"
-  );
+  window.alert("Error!! You have to write an existing method. Please write either +, -, * or /");
 }
 //6
 window.alert("Thank you for using this calculator!");
