@@ -72,12 +72,5 @@ console.log(elements);
 // elements[8].textContent = "Ställ in i frysen över natten.";
 
 
-// 1
-let recipeN = document.getElementById("recipe-name");
-console.log(recipeN);
-//2
-let tagName = document.getElementsByTagName("h1");
-console.log(tagName);
-// 3
-const fontSizeFind = document.querySelector(".description");
-console.log(fontSizeFind.style.fontSize);
+
+
